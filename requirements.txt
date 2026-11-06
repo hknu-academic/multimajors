@@ -1,0 +1,8 @@
+streamlit
+pandas
+openpyxl
+PyYAML
+streamlit-option-menu
+google-generativeai
+google-auth-oauthlib
+google-auth-httplib2

@@ -1,0 +1,72 @@
+# ============================================================
+# 📌 일반 설정 파일
+# 경로, 기본값 등
+# ============================================================
+
+# 파일 경로
+paths:
+  data_folder: "data"
+  images_folder: "images"
+  curriculum_images: "images/curriculum"
+  config_folder: "config"
+
+# 데이터 파일
+data_files:
+  programs: "data/programs.xlsx"
+  courses: "data/courses.xlsx"
+  majors: "data/majors.xlsx"
+  faq: "data/faq.xlsx"
+  graduation_req: "data/graduation_req.xlsx"
+  primary_req: "data/primary_req.xlsx"
+  curriculum_mapping: "data/curriculum_mapping.xlsx"
+
+# 앱 설정
+app:
+  title: "🎓 한경국립대 다전공 안내"
+  sidebar_title: "HKNU 다전공"
+  page_icon: "🎓"
+  layout: "wide"
+
+# 메뉴
+menus:
+  - name: "AI챗봇 상담"
+    icon: "💬"
+  - name: "다전공 제도 안내"
+    icon: "📚"
+  - name: "FAQ"
+    icon: "❓"
+
+# 예시 질문 (챗봇용)
+example_questions:
+  - "복수전공 신청 자격이 뭐야?"
+  - "신청 기간은 언제인가요?"
+  - "부전공이랑 복수전공 차이가 뭐야?"
+  - "마이크로디그리가 뭐야?"
+
+# 기본값
+defaults:
+  admission_year_min: 2020
+  curriculum_year: 2025
+  difficulty: 3
+
+# AI 설정
+ai:
+  use_ai_fallback: true
+  semantic_threshold: 0.75
+  model: "gemini-2.0-flash"
+
+# 제도 목록 (순서)
+program_order:
+  - "복수전공"
+  - "부전공"
+  - "융합전공"
+  - "융합부전공"
+  - "연계전공"
+  - "소단위전공과정(마이크로디그리)"
+
+# 타겟 제도 (학점 변동 표시용)
+target_programs:
+  - "복수전공"
+  - "부전공"
+  - "융합전공"
+  - "융합부전공"
