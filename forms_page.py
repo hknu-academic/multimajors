@@ -385,7 +385,7 @@ def _show_pdf_pages(form):
 
     n = len(pages)
     all_portrait = not any(landscape for _, landscape in pages)
-    st.caption("🔍 글씨가 작으면 두 손가락으로 화면을 벌려 확대하거나, 아래 PDF 받기로 열어 보세요.")
+    st.caption("🔍 글씨가 작으면 두 손가락으로 화면을 벌려 확대하거나, PDF 받기로 열어 보세요.")
 
     if all_portrait and n <= SIDE_BY_SIDE_MAX:
         cols = st.columns(n) if n > 1 else [st.columns(PORTRAIT_COLS)[1]]
