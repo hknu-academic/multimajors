@@ -385,8 +385,7 @@ def _show_pdf_pages(form):
 
     n = len(pages)
     all_portrait = not any(landscape for _, landscape in pages)
-    st.caption("🔍 이미지에 마우스를 올리면 오른쪽 위에 크게 보기 버튼이 나타납니다. "
-               "닫을 때는 오른쪽 위 ✕ 또는 Esc 키를 누르세요(뒤로 가기를 누르면 사이트를 벗어납니다).")
+    st.caption("🔍 글씨가 작으면 두 손가락으로 화면을 벌려 확대하거나, 아래 PDF 받기로 열어 보세요.")
 
     if all_portrait and n <= SIDE_BY_SIDE_MAX:
         cols = st.columns(n) if n > 1 else [st.columns(PORTRAIT_COLS)[1]]
@@ -450,6 +449,13 @@ def _match(form, query):
 # 메인: multimajor.py 에서 호출
 # ------------------------------------------------------------
 def render_forms_page():
+    st.markdown("""
+    <style>
+    [data-testid="StyledFullScreenButton"],
+    button[title="View fullscreen"] { display: none !important; }
+    </style>
+    """, unsafe_allow_html=True)
+
     st.markdown(
         '<p style="font-size:clamp(1.5rem, 4vw, 2rem); margin-bottom:12px; '
         'color:#1f2937; font-weight:600;">📁 학사 자료실</p>',
