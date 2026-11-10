@@ -989,8 +989,8 @@ def main():
         
         menu = option_menu(
             menu_title=None,
-            options=["다전공 제도 안내", "다전공 비교 분석"], 
-            icons=["journal-bookmark-fill", "calculator-fill"],
+            options=["다전공 제도 안내", "다전공 비교 분석", "학사 자료실"], 
+            icons=["journal-bookmark-fill", "calculator-fill", "folder-fill"],
             default_index=0,
             styles={
                 "container": {"padding": "0!important"},
@@ -1470,6 +1470,11 @@ def main():
         from simulation import render_simulation_page
         render_simulation_page()
 
+    # 학사 서식
+    elif menu == "학사 자료실":
+        from forms_page import render_forms_page
+        render_forms_page()
+        
 if __name__ == "__main__":
     initialize_session_state()
     main()

@@ -6,3 +6,4 @@ streamlit-option-menu
 google-generativeai
 google-auth-oauthlib
 google-auth-httplib2
+pymupdf==1.26.7
