@@ -452,7 +452,10 @@ def render_forms_page():
     st.markdown("""
     <style>
     [data-testid="StyledFullScreenButton"],
-    button[title="View fullscreen"] { display: none !important; }
+    button[title="View fullscreen"],
+    button[aria-label="Fullscreen"],
+    button[aria-label="Close fullscreen"],
+    [data-testid="stElementToolbar"] { display: none !important; }
     </style>
     """, unsafe_allow_html=True)
 
